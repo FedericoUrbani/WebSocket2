@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "842387bc-1aff-4156-8ee8-872386bd4bf3",
+		"name": "Socket2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23018916"
+	},
+	"item": [
+		{
+			"name": "socket message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n      \"sender\": \"Postman\",\r\n      \"type\": \"type of message\",\r\n      \"message\":\"message from postman\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/broadcast-message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"broadcast-message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
