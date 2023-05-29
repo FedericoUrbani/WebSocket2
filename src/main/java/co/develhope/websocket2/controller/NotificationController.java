@@ -30,7 +30,7 @@ public class NotificationController {
 
     @MessageMapping("/client-message")
     @SendTo("/topic/broadcast")
-    public MessageDTO HandleMessageFromWebSocket(ClientMessageDTO clientMessageDTO){
+    public MessageDTO socketMessageHendler(ClientMessageDTO clientMessageDTO){
         System.out.printf("Arrived something on app/hello : %s",clientMessageDTO);
         return new MessageDTO("message from client " + clientMessageDTO.getClientName() , " - message: "
                 + clientMessageDTO.getClientAlert(), " alert: " + clientMessageDTO.getClientMsg());
